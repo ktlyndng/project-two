@@ -1,58 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="./../css/styles.css" />
+    <script src="./js/script.js" defer></script>
+    <style>
+      .accordion {
+        background-color: #98c1d9;
+        color: black;
+        cursor: pointer;
+        padding: 5px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: #a0cce6;
+      }
+
+      .accordion:after {
+        content: "\002B";
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      .panel {
+        padding: 0 18px;
+        background-color: #98c1d9;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+    </style>
+  </head>
+  <body>
     <nav>
-        <a href="./index.html"
-          ><img id="logo" src="./images/logo.png" alt="Logo"
-        /></a>
-        <img id="hamburger" src="./images/hamburger.png" alt="Menu" />
-        <div id="overlay"></div>
-        <ul id="menu">
-          <li><a href="inside-page-one/">Food Services</a></li>
-          <li><a href="inside-page-two/">Shopping</a></li>
-          <li><a href="inside-page-three/">Frequently Asked Questions</a></li>
-        </ul>
-      </nav>
-      <main>
-          <article>
-              <section>
-                  <h1>Frequently Asked Questions</h1>
-                  <h2>Are there any brands that don’t have any political affiliation?</h2>
-                    <p>Yes! Brands such as American Apparel, Chuck E Cheese and H&M have no record of donating any money to any political party. You can access the full list here. </p>
-                  <h2>Why the Democratic Party?</h2>
-                  <p>We believe in the equal rights of every human being in America, from immigrants to the rich—we believe in equality. The Republican party shown through the Trump administration has done the opposite of showing equality.</p>
-                  <p> The Democratic party is another step into ensuring the equal rights of everyone and it starts with better healthcare, women’s rights, a reformed justice system, etc. You can find what the Democratic party stands for here. </p>
-                </p>
-                  <h2>You seemed biased. 
-                    Why don’t you include brands that endorse Republicans? 
-                    </h2>
-                    <p>We believe that not all Republicans are bad. Although this organization gives alternatives to brands that endorse the Republican party, we still lists those brands out. If you wanted to see which brands endorse which, that’s what this website is for!</p>
-                    <p>We are Democrat-backed organization so we lean toward the Democratic party; however, if you would like to know more about brands that endorse the Republican party, feel free to contact us!</p>
-                  <h2>What can I do to help?</h2>
-                  <p>Great question! You can sign up to be a part of our mailing list and get involved with our organization! 
-                    <p>Make sure you’re registered to vote by clicking here.</p>
-                    <p>Request your absentee ballot or find your in-person ballot near you here. </p>
-                    
-                    </p>
-              </section>
-          </article>
-      </main>
-      <footer>
-        <p>
-          Designed by
-          <a href="/">Kaitlyn Dang</a>
-          for
-          <a href="https://mejo187.com">Foundations of Interactive Media</a>
-          at
-          <a href="https://unc.edu"
-            >UNC Chapel Hill</a
-          >.
-        </p>
-      </footer>
-</body>
+      <a href="./index.html"
+        ><img id="logo" src="./../images/logo.png" alt="Logo"
+      /></a>
+      <img id="hamburger" src="./images/hamburger.png" alt="Menu" />
+      <div id="overlay"></div>
+      <ul id="menu">
+        <li>
+          <a href="inside-page-one/"
+            ><h5><i>Food</i></h5></a
+          >
+        </li>
+        <li>
+          <a href="inside-page-two/"
+            ><h5><i>Shopping</i></h5></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><h5><i>Hardware</i></h5></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><h5><i>Other</i></h5></a
+          >
+        </li>
+        <li>
+          <a href="inside-page-three/"
+            ><h5><i>FAQ</i></h5></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <section>
+          <h1>Frequently Asked Questions</h1>
+          <button class="accordion">
+            <h4>
+              <i
+                >Are there any brands that don’t have any political
+                affiliation?</i
+              >
+            </h4>
+          </button>
+          <div class="panel">
+            <p>
+              Yes! Brands such as American Apparel, Chuck E Cheese and H&M have
+              no record of donating any money to any political party. You can
+              access the full list <a href="#">here</a>.
+            </p>
+          </div>
+          <button class="accordion">
+            <h4><i>Why the Democratic Party?</i></h4>
+          </button>
+          <div class="panel">
+            <p>
+              We believe in the equal rights of every human being in America,
+              from immigrants to the rich—we believe in equality. The Republican
+              party shown through the Trump administration has done the opposite
+              of showing equality.
+            </p>
+            <p>
+              The Democratic party is another step into ensuring the equal
+              rights of everyone and it starts with better healthcare, women’s
+              rights, a reformed justice system, etc. You can find what the
+              Democratic party stands for <a href="#">here</a>.
+            </p>
+          </div>
+          <button class="accordion">
+            <h4>
+              <i
+                >You seemed biased. Why don’t you include brands that endorse
+                Republicans?
+              </i>
+            </h4>
+          </button>
+          <div class="panel">
+            <p>
+              We believe that not all Republicans are bad. Although this
+              organization gives alternatives to brands that endorse the
+              Republican party, we still lists those brands out. If you wanted
+              to see which brands endorse which, that’s what this website is
+              for!
+            </p>
+            <p>
+              We are Democrat-backed organization so we lean toward the
+              Democratic party; however, if you would like to know more about
+              brands that endorse the Republican party, feel free to contact us!
+            </p>
+          </div>
+          <button class="accordion">
+            <h4><i>What can I do to help?</i></h4>
+          </button>
+          <div class="panel">
+            <p>
+              Great question! You can sign up to be a part of our mailing list
+              and get involved with our organization!
+            </p>
+            <p>
+              Make sure you’re registered to vote by clicking
+              <a href="#">here</a>.
+            </p>
+            <p>
+              Request your absentee ballot or find your in-person ballot near
+              you <a href="#">here</a>.
+            </p>
+          </div>
+          <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+              });
+            }
+          </script>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <p>
+        Designed by
+        <a href="/">Kaitlyn Dang</a>
+        for
+        <a href="https://mejo187.com">Foundations of Interactive Media</a>
+        at
+        <a href="https://unc.edu">UNC Chapel Hill</a>.
+      </p>
+    </footer>
+  </body>
 </html>

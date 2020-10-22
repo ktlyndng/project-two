@@ -2,8 +2,63 @@
 
 html,
 body {
+  background-color: #98c1d9;
+}
+
+h1 {
   font-family: "Playfair Display";
-  src: url("./") format("truetype");
+  src: url("./../fonts/PlayfairDisplay-Regular.otf") format("truetype");
+  font-size: 40px;
+  color: #ee6c4d;
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: "Playfair Display";
+  src: url("./../fonts/PlayfairDisplay-Regular.otf") format("truetype");
+  font-size: 39px;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Source Sans Pro";
+  src: url("./../fonts/PlayfairDisplaySC-Italic.otf") format("truetype");
+  font-size: 35px;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Source Sans Pro";
+  src: url("./../fonts/SourceSansPro-BoldItalic.ttf") format("truetype");
+  font-size: 25px;
+  text-align: center;
+}
+
+h5 {
+  font-family: "Playfair Display";
+  src: url("./../fonts/PlayfairDisplaySC-BlackItalic.otf") format("truetype");
+  font-size: 25px;
+}
+
+p {
+  font-family: "Source Sans Pro";
+  src: url("./../fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
 }
 
 /* Section Styles */
@@ -18,8 +73,119 @@ body {
 
 /* Navbar Styles */
 
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  height: 60px;
+  width: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#hamburger {
+  display: none;
+}
+
+#overlay {
+  display: none;
+}
+
 /* Navigation Mobile Styles */
+@media (max-width: 767px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  nav ul {
+    display: none;
+    max-width: 60vw;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  nav ul.active {
+    display: block;
+  }
+
+  nav ul li {
+    padding: 20px;
+  }
+
+  #hamburger {
+    display: block;
+    height: 30px;
+    width: auto;
+  }
+
+  #overlay {
+    display: none;
+    width: 100vh;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  #overlay.active {
+    display: block;
+  }
+}
 
 /* Navigation Desktop Styles */
+@media (min-width: 768px) {
+  nav {
+    padding: 0 40px;
+  }
+  nav ul {
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 
 /* Footer Styles */
+
+footer {
+  background: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+footer a:visited {
+    color: white;
+}
+
+footer a {
+  color: white;
+}
