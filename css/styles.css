@@ -5,6 +5,7 @@ body {
   background-color: #98c1d9;
   margin: 0;
   padding: 0;
+  width: auto;
 }
 
 h1 {
@@ -74,6 +75,21 @@ figure {
 
 /* Section Styles */
 
+main > article > section {
+  padding: 65px 20px;
+}
+
+@media (min-width: 768px) {
+  main > article > section > header > p {
+    max-width: 50%;
+  }
+  main > article > section {
+    padding: 65px 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
 /* Grid Styles */
 
 @media (min-width: 786px) {
@@ -87,10 +103,14 @@ figure {
   /* this is a grid with four columns */
   .grid-1-4 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 30px;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-gap: 20px;
     margin: 0 auto;
-    padding: 60px 50px;
+    padding: 50px 200px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 }
 
@@ -107,7 +127,7 @@ figure {
 }
 
 .card section {
-  padding: 15px;
+  padding: 5px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -170,13 +190,13 @@ figure {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #7cace3;
+  background-color: #e69b9b;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #e69b9b;
+  background-color: #7cace3;
   color: white;
   transform: rotateY(180deg);
 }
