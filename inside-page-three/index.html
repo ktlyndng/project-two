@@ -55,29 +55,19 @@
       <div id="overlay"></div>
       <ul id="menu">
         <li>
-          <a href="./../inside-page-one/index.html"
-            ><h5><i>Food</i></h5></a
-          >
+          <a href="./../inside-page-one/index.html"><i>Food</i></a>
         </li>
         <li>
-          <a href="./../inside-page-two/index.html"
-            ><h5><i>Shopping</i></h5></a
-          >
+          <a href="./../inside-page-two/index.html"><i>Shopping</i></a>
         </li>
         <li>
-          <a href="#"
-            ><h5><i>Hardware</i></h5></a
-          >
+          <a href="#"><i>Hardware</i></a>
         </li>
         <li>
-          <a href="#"
-            ><h5><i>Other</i></h5></a
-          >
+          <a href="#"><i>Other</i></a>
         </li>
         <li>
-          <a href="#"
-            ><h5><i>FAQ</i></h5></a
-          >
+          <a href="#"><i>FAQ</i></a>
         </li>
       </ul>
     </nav>
@@ -156,6 +146,12 @@
               you <a href="#">here</a>.
             </p>
           </div>
+          <button class="accordion">
+            <h4><i>Credits</i></h4>
+          </button>
+          <div class="panel">
+            <p>Click <a href="./../credits/index.html">here</a> for credits.</p>
+          </div>
         </section>
       </article>
     </main>
@@ -169,22 +165,5 @@
         <a href="https://unc.edu">UNC Chapel Hill</a>.
       </p>
     </footer>
-
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
   </body>
 </html>

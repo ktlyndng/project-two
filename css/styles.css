@@ -16,6 +16,7 @@ h1 {
   text-align: center;
   max-width: 50%;
   margin: 0 auto;
+  margin-top: 15px;
 }
 
 h2 {
@@ -51,6 +52,17 @@ h6 {
   font-size: 35px;
   text-align: center;
   color: white;
+  text-decoration: none;
+  align-items: center;
+  height: auto;
+}
+
+h6 > a {
+  text-decoration: none;
+}
+
+h6 > a:visited {
+  color: white;
 }
 
 p {
@@ -61,6 +73,7 @@ p {
   width: 100%;
   max-width: 50%;
   margin: 0 auto;
+  margin-top: 15px;
   padding: 25px;
   color: white;
 }
@@ -77,6 +90,16 @@ img {
 
 figure {
   margin: 0;
+}
+
+.sixteen-by-nine {
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  padding: 0;
 }
 
 /* Section Styles */
@@ -104,25 +127,28 @@ main > article > section {
     text-decoration: none;
   }
 }
+
 /* Grid Styles */
 
 @media (min-width: 786px) {
   .grid-1-1 {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr;
     margin: 0 auto;
     padding: 15px;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    align-content: center;
   }
+
   /* this is a grid with two columns */
   .grid-1-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: auto;
-    padding: 25px;
+    padding: 10px;
     align-content: center;
+    width: auto;
+    height: auto;
   }
   /* this is a grid with four columns */
   .grid-1-4 {
@@ -146,17 +172,19 @@ main > article > section {
   box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.16);
   border-radius: 25px;
   overflow: hidden;
-  margin-bottom: 40px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  margin-bottom: 15px;
+  padding: 5px;
+  max-width: 500px;
+  width: 100%;
+  min-height: 200px;
+  margin: 20px;
+  justify-content: space-between;
 }
 
 .card section {
-  padding: 5px;
-  justify-content: center;
-  align-items: center;
+  padding: 2px;
+  margin: auto;
+  width: auto;
   align-content: center;
 }
 
@@ -168,13 +196,41 @@ main > article > section {
 }
 
 .card img {
-  justify-content: center;
-  padding: 10px;
-  margin: 0;
+  display: flex;
+  padding: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
   align-content: center;
   height: auto;
   width: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card > h6 > a {
+  align-content: center;
+  justify-content: center;
+  color: white;
+}
+
+article.card {
+  padding: 0;
+  margin: 0;
+}
+
+article.card > h6 > i {
+  align-content: center;
   align-items: center;
+  height: 50%;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media (min-width: 786px) {
@@ -245,6 +301,20 @@ main > article > section > div > article > section > figure > img {
   align-content: center;
 }
 
+@media (max-width: 767px) {
+  p {
+    width: auto;
+    max-width: 80%;
+    padding: 5px;
+    font-size: 20px;
+    justify-content: space-around;
+  }
+
+  p > a:visited {
+    color: white;
+  }
+}
+
 /* Header Styles */
 
 /* Button Styles */
@@ -276,8 +346,9 @@ nav {
 }
 
 #logo {
-  height: 60px;
+  height: 50px;
   width: auto;
+  padding: 5px;
 }
 
 nav ul {
@@ -294,6 +365,7 @@ nav ul li a {
 
 #hamburger {
   display: none;
+  padding: 5px;
 }
 
 #overlay {
@@ -332,7 +404,7 @@ nav ul li a {
 
   #hamburger {
     display: block;
-    height: 30px;
+    height: 50px;
     width: auto;
   }
 
@@ -393,7 +465,7 @@ footer a {
   background-color: #98c1d9;
   color: black;
   cursor: pointer;
-  padding: 5px;
+  padding: 6px;
   width: 100%;
   border: none;
   text-align: left;
@@ -425,7 +497,4 @@ footer a {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-}
-
-@media (max-width: 767px) {
 }
